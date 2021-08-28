@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BakersPoint.Application\BakersPoint.Application.csproj" />
+      <ProjectReference Include="..\BakersPoint.Domain\BakersPoint.Domain.csproj" />
+      <ProjectReference Include="..\BakersPoint.Infrastructure\BakersPoint.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>

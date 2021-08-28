@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BakersPoint.Domain\BakersPoint.Domain.csproj" />
+      <ProjectReference Include="..\BakersPoint.Infrastructure\BakersPoint.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
