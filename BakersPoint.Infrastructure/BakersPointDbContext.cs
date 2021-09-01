@@ -5,6 +5,14 @@ using Microsoft.Extensions.Configuration;
 
 namespace BakersPoint.Infrastructure
 {
+    public interface IApplicationContext
+    {
+        DbSet<Product> Products { get; set; }
+        DbSet<Invoice> Invoices { get; set; }
+
+        Task SaveChangesAsync();
+    }
+
     public class ApplicationContext : DbContext, IApplicationContext
     {
         public ApplicationContext(DbContextOptions<ApplicationContext> options): base(options)
@@ -18,14 +26,6 @@ namespace BakersPoint.Infrastructure
         {
             await base.SaveChangesAsync();
         }
-    }
-
-    public interface IApplicationContext
-    {
-        DbSet<Product> Products { get; set; }
-        DbSet<Invoice> Invoices { get; set; }
-
-        Task SaveChangesAsync();
     }
     
     public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<ApplicationContext> 
