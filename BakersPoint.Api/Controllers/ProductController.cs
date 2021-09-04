@@ -28,11 +28,11 @@ namespace BakersPoint.Api.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            _logger.LogInformation($"Getting product with ID: {id}");
+            _logger.LogInformation("Getting product with ID: {ProductId}", id);
             var product = await _productService.GetProductByIdAsync(id);
             if (product is null)
             {
-                _logger.LogInformation($"Product with ID: {id}, Not found");
+                _logger.LogWarning("Product with ID: {ProductId}, Not found", id);
                 return NotFound();
             }
 

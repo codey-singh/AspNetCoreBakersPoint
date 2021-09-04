@@ -13,14 +13,11 @@ namespace BakersPoint.Application
         }
 
         public Task<IEnumerable<Product>> GetProductsAsync()
-        {
-            return Task.FromResult(_context.Products.AsEnumerable());
-        }
+             => Task.FromResult(_context.Products.AsEnumerable());
+        
 
         public async Task<Product> GetProductByIdAsync(int id)
-        {
-            return await _context.Products.FindAsync(id);
-        }
+            => await _context.Products.FindAsync(id);
 
         public async Task AddProductAsync(Product product)
         {
