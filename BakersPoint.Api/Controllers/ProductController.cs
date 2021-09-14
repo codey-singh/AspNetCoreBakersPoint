@@ -1,6 +1,8 @@
 ﻿using BakersPoint.Application;
 using BakersPoint.Domain;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
 
 namespace BakersPoint.Api.Controllers
 {

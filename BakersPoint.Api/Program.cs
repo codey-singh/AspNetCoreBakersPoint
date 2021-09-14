@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
+
 namespace BakersPoint.Api
 {
     public class Program
