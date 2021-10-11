@@ -7,6 +7,13 @@ using System.Threading.Tasks;
 
 namespace BakersPoint.Application
 {
+    public interface IProductService
+    {
+        Task<IEnumerable<Product>> GetProductsAsync();
+        Task<Product> GetProductByIdAsync(int id);
+        Task AddProductAsync(Product product);
+    }
+    
     public class ProductService: IProductService
     {
         private readonly IApplicationContext _context;
@@ -35,12 +42,5 @@ namespace BakersPoint.Application
                 Console.WriteLine(ex.Message);
             }
         }
-    }
-
-    public interface IProductService
-    {
-        Task<IEnumerable<Product>> GetProductsAsync();
-        Task<Product> GetProductByIdAsync(int id);
-        Task AddProductAsync(Product product);
     }
 }
