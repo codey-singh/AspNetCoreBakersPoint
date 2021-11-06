@@ -42,6 +42,6 @@ namespace BakersPoint.Infrastructure
             var connectionString = configuration.GetConnectionString("DefaultConnection"); 
             builder.UseSqlServer(connectionString); 
             return new ApplicationContext(builder.Options); 
-        } 
+        }
     }
 }
